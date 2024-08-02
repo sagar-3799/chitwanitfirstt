@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitwan I.T Solutions Pvt. Ltd.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image/favicon.png" type="image">
+    <script src="https://kit.fontawesome.com/4d276fa6f1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Navigation Menu Open-->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Chitwan I.T. Solutions Pvt. Ltd</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services" id="scrollToServices">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#contact" id="scrollToServices">Contact</a></li>
+                <li><a href="index.html#request" id="scrollToServices">Call</a></li>
+            </ul>
+            <a href="https://www.zoho.com/mail" class="action_btn">Email</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services" id="scrollToServices">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#contact" id="scrollToServices">Contact</a></li>
+            <li><a href="#request" id="scrollToServices">Call</a></li>
+            <a href="https://www.zoho.com/mail" class="action_btn">Email</a>
+        </div>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+            toggleBtnIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        };
+    </script>
+    <!--Navigation Menu Close-->
+
+    
+<section class="about">
+    <h2>About</h2>
+    <div class="about-row">
+
+        <div class="about-col">
+            <i class="fa-solid fa-globe"><span class="country">Nepal</span></i>
+            <i class="fa-solid fa-city"><span class="country">Chitwan</span></i>
+            <i class="fa-solid fa-location-dot"><span class="country">Bharatpur-03 Sheedchowk Ganeshmarket</span></i>
+        </div>
+        <div class="about-col">
+            <p>As prominent supplier of comprehensive ICT services, Chitwan IT Solutions Pvt. Ltd.
+            provides a variety of technological options to companies of all sizes. Our business focuses in 
+            providing comprehensive services that are customized to satisfy the individual requirements of 
+            our customers. We have the knowledge to support our clients in utilizing technology to accomplish 
+            their business objectives, from hardware acquisition through software services and IT support.
+            Chitwan IT Solutions Pvt. Ltd. is a leading suppliers of CCTV surveillance systems, network setup 
+            services, fiber installation services, and IT related services not only in Chitwan but in Nepal too. 
+            Our business specializes in providing and setting up cutting-edge security systems for streets, 
+            public buildings, and other locations. In order to provide our clients with flawless connectivity, 
+            we also provide dependable fiber installation services.
+            Our skilled staff has years of experience in creating, putting into place, and maintaining security 
+            systems that are tailored to the individual requirements of our clients. We take pride in offering 
+            our clients solutions that offer constant defense against security threats so they can go about their 
+            everyday lives worry-free. Our major professional services includes.</p>           
+        </div>
+    </div>
+    </section>
+
+
+        <!-- Copyright Open -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Chitwan I.T Solutions Pvt. Ltd. All rights reserved.</p>
+                <p>Designed by Chitwan I.T Solutions Pvt. Ltd.</p>
+            </div>
+        </footer>
+        <!-- Copyright Close -->
+    
+</body>
+</html>

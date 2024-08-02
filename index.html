@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitwan I.T Solutions Pvt. Ltd.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image/favicon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/4d276fa6f1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Navigation Menu Open-->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Chitwan I.T. Solutions Pvt. Ltd</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services" id="scrollToServices">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#contact" id="scrollToServices">Contact</a></li>
+                <li><a href="#request" id="scrollToServices">Call</a></li>
+            </ul>
+            <a href="https://www.zoho.com/mail" class="action_btn">Email</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services" id="scrollToServices">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#contact" id="scrollToServices">Contact</a></li>
+            <li><a href="#request" id="scrollToServices">Call</a></li>
+            <a href="https://www.zoho.com/mail" class="action_btn">Email</a>
+        </div>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+            toggleBtnIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        };
+    </script>
+    <!--Navigation Menu Close-->
+
+
+    <!--Home Page Open-->
+    <div class="container">
+        <div class="home">
+            <a href="https://www.facebook.com/chitwanit" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <h2>Chitwan I.T. Solutions Pvt. Ltd.</h2>
+            <p>All I.T Solutions</p>
+        </div>
+    </div>
+    <!--Home Page Close-->
+
+
+    <!--Service Open-->
+    <div id="service">
+        <section class="services">
+        <div class="row-2">
+            <div class="col-2">
+                <div class="icon3"><i class="fa fa-rocket"></i></div>
+                <h3>Quality Service</h3>
+                <p>Reliable and responsive service for your satisfaction</p>
+            </div>
+            <div class="col-2">
+                <div class="icon4"><i class="fa fa-code"></i></div>
+                <h3>Value Oriented</h3>
+                <p>Solutions offering long-term value</p>
+            </div>
+            <div class="col-2">
+                <div class="icon5"><i class="fa fa-database"></i></div>
+                <h3>Service Coverage</h3>
+                <p>Service delivery all over the country</p>
+            </div>
+            <div class="col-2">
+                <div class="icon6"><i class="fa fa-cog"></i></div>
+                <h3>Contemporary</h3>
+                <p>Solutions meeting the business needs of today</p>
+            </div>
+        </div>
+        </section>
+    </div>
+    <!--Service Close-->
+
+
+    <!--request Open-->
+    <div id="request">
+        <form id="callbackForm"
+            action="https://script.google.com/macros/s/AKfycbxIVtlerHv0iNHJWfXpxYUOSBdjdfqtawP4ohJOh0l9R-7P9AVwKjVUA3eLTwYjradGUQ/exec"
+            method="post">
+            <div class="row-request">
+                <div class="col-requestleft">
+                    <h2>Request a Free Call Back</h2>
+                    <p>Provide discussion information and well get back to you as soon as possible</p>
+                </div>
+
+                <div class="col-requestright">
+                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <select name="service" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="IT">IT</option>
+                        <option value="CCTV">CCTV</option>
+                        <option value="Security">Security</option>
+                        <option value="Optical Fiber">Optical Fiber</option>
+                        <option value="Communication">Communication</option>
+                    </select>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Phone No" required>
+                    <div class="submit-btn">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                    <div id="successMessage" class="message">
+                        Your message has been sent successfully!
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('callbackForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+    var formData = new FormData(this);
+
+    fetch(this.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            // Show success message
+            var successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            
+            // Hide message after 3 seconds
+            setTimeout(function() {
+                successMessage.style.display = 'none';
+            }, 3000);
+            
+            // Reset form fields
+            event.target.reset();
+        } else {
+            alert('There was a problem with your submission.');
+        }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem with your submission.');
+            });
+        });
+
+    </script>
+    <!-- request Close -->
+
+
+
+
+    <!-- Contact Section Open -->
+     <div id="contact">
+    <section class="contact">
+        <h2 class="contact-us">Contact Us</h2>
+        <div class="contact-content">
+                    <div class="contact-left">
+                        <h3>Phone</h3>
+                        <div class="contact-item">
+                            <span class="phone"><i class="fa-solid fa-phone-volume"></i></span>
+                            <a href="tel:9851151072">
+                                <div>
+                                    <span>Madhav Bhattrai</span>
+                                    <span>Proprietor</span>
+                                    <span>9851151072</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="phone"><i class="fa-solid fa-phone-volume"></i></span>
+                            <a href="tel:9802803915">
+                                <div>
+                                    <span>Madhav Bhattrai</span>
+                                    <span>Proprietor</span>
+                                    <span>9802803915</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="phone"><i class="fa-solid fa-phone-volume"></i></span>
+                            <a href="tel:9851181072">
+                                <div>
+                                    <span>Sagar Sharma Chapagain</span>
+                                    <span>Manager</span>
+                                    <span>9851181072</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="phone"><i class="fa-solid fa-phone-volume"></i></span>
+                            <a href="tel:9802803913">
+                                <div>
+                                    <span>Sagar Sharma Chapagain</span>
+                                    <span>Manager</span>
+                                    <span>9802803913</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="phone"><i class="fa-solid fa-phone-volume"></i></span>
+                            <a href="tel:9802803911">
+                                <div>
+                                    <span>Sabin Chhetri</span>
+                                    <span>Senior Technician</span>
+                                    <span>9802803911</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <h3>WhatsApp</h3>
+                        <div class="contact-item">
+                            <span class="whatapp"><i class="fa-brands fa-square-whatsapp"></i></span>
+                            <a href="https://wa.me/9851151072">
+                                <div>
+                                    <span>Madhav Bhattrai</span>
+                                    <span>9851151072</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="whatapp"><i class="fa-brands fa-square-whatsapp"></i></span>
+                            <a href="https://wa.me/9802803913">
+                                <div>
+                                    <span>Sagar Sharma Chapagain</span>
+                                    <span>9802803913</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Second Column: Email and Viber -->
+                    <div class="contact-right">
+                        <div class="email-section">
+                            <h3>Email</h3>
+                            <a href="mailto:example1@example.com">
+                                <span class="mail"><i class="fa-solid fa-envelope-circle-check"></i></span>
+                                <span>chitwanit@chitwanit.com.np</span>
+                            </a>
+                            <a href="mailto:example5@example.com">
+                                <span class="mail"><i class="fa-solid fa-envelope-circle-check"></i></span>
+                                <span>admin@chitwanit.com.np</span>
+                            </a>
+                            <a href="mailto:example2@example.com">
+                                <span class="mail"><i class="fa-solid fa-envelope-circle-check"></i></span>
+                                <span>service@chitwanit.com.np</span>
+                            </a>
+                            <a href="mailto:example3@example.com">
+                                <span class="mail"><i class="fa-solid fa-envelope-circle-check"></i></span>
+                                <span>it@chitwanit.com.np</span>
+                            </a>
+                            <a href="mailto:example4@example.com">
+                                <span class="mail"><i class="fa-solid fa-envelope-circle-check"></i></span>
+                                <span>marketing@chitwanit.com.np</span>
+                            </a>
+                        </div>
+                        <h3>Viber</h3>
+                        <div class="contact-item">
+                            <span class="viber"><i class="fa-brands fa-viber"></i></span>
+                            <a href="viber://chat?number=9851151072">
+                                <div>
+                                    <span>Madhav Bhattrai</span>
+                                    <span>9851151072</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="viber"><i class="fa-brands fa-viber"></i></span>
+                            <a href="viber://chat?number=9802803913">
+                                <div>
+                                    <span>Sagar Sharma Chapagain</span>
+                                    <span>9802803913</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
+
+
+
+    <!--Contact Section Open-->
+
+    <!--Google map-->
+    <div class="map-container">
+        <h3>Our Location</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d262.5732320418122!2d84.42185093785389!3d27.694113502334936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fb6a30c8757f%3A0x105cd513216323e7!2sChitwan%20It%20Solution%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1712025919937!5m2!1sen!2snp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!--Google map-->
+
+
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-up-long"></i></button>
+    <script>
+        // Get the button:
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+     mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+    </script>
+
+
+
+    <!-- Copyright Open -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Chitwan I.T Solutions Pvt. Ltd. All rights reserved.</p>
+            <p>Designed by Chitwan I.T Solutions Pvt. Ltd.</p>
+        </div>
+    </footer>
+    <!-- Copyright Close -->
+
+
+    <script>
+        // JavaScript to handle smooth scroll if not using CSS scroll-behavior
+        document.getElementById('scrollToServices').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            document.getElementById('services').scrollIntoView({
+                behavior: 'smooth' // Smooth scrolling
+            });
+        });
+    </script>
+</body>
+
+</html>
