@@ -350,7 +350,6 @@ select {
 
 
 
-
 /* Contact */
 .contact {
   padding: 1.25rem;  /* 20px */
@@ -414,10 +413,6 @@ select {
   color: #fff;
 }
 
-
-
-
-
 .contact-item div,
 .email-section span,
 .contact-row span {
@@ -436,7 +431,6 @@ select {
   margin-bottom: 0.625rem;
   /* 10px */
 }
-
 
 .contact-item i {
   padding: 0px 1rem 0 0;
